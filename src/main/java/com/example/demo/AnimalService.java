@@ -40,6 +40,10 @@ public class AnimalService {
 
         return animalRepository.findById(animalId).orElse(null);
     }
+    public List<Animals> getAnimalByImg(String animalImg) {
+
+        return animalRepository.getAnimalByImg(animalImg);
+    }
 
     /**
      * Fetch all students whose major matches the search term.

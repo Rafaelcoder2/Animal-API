@@ -19,17 +19,21 @@ public class Animals {
         @Column(nullable = false)
         private int age;
 
-        public Animals(int animalId, String name, String description, int age) {
+        private String animalImg;
+
+        public Animals(int animalId, String name, String description, int age, String animalImg) {
             this.animalId = animalId;
             this.name = name;
             this.description = description;
             this.age = age;
+            this.animalImg= animalImg;
         }
 
         public Animals(String name, String description, int age) {
             this.name = name;
             this.description = description;
             this.age = age;
+            this.animalImg = animalImg;
         }
 
         //Always include a no-argument constructor.
@@ -43,6 +47,14 @@ public class Animals {
         public void setAnimalId(int animalId) {
             this.animalId = animalId;
         }
+
+      public String getAnimalImg() {
+        return animalImg;
+    }
+
+       public void setAnimalImg(int animalId) {
+        this.animalImg = animalImg;
+    }
         public String getAllAnimalsWithAfrican(String name){return name;}
         public void setAllAnimalsWithAfrican(String name){this.name= "African";}
 
